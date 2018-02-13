@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>RailsWikinimous</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +11,11 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <%= link_to "Wikinimous", root_path, class: "navbar_link" %>
+      <%= link_to "Add Article", new_article_path, class: "navbar_link" %>
+    </div>
     <%= yield %>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </body>
 </html>

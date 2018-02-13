@@ -1,0 +1,21 @@
+
+<div class="wrapper">
+
+  <div class="article-titre">
+    <h1><%= @article.title %></h1>
+    <div class="icone">
+      <%= link_to edit_article_path(@article) do%>
+        <i class="fas fa-pencil-alt"></i>
+      <% end %>
+    </div>
+    <div class="icone">
+      <%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do%>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
+    </div>
+  </div>
+
+  <img src="<%= @article.picture %>" class="image">
+  <p><%= @article.content %></p>
+
+</div>
